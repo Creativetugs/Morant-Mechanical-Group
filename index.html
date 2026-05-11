@@ -42,7 +42,7 @@
 
         .btn-white {
             background-color: #ffffff;
-            color: var(--brand-dark);
+            color: var(--brand-dark) !important;
             transition: all 0.3s ease;
         }
         .btn-white:hover {
@@ -172,10 +172,10 @@
                 Reliable Heating & <br> <span class="text-brand-blue">Cooling Solutions</span>
             </h1>
             <p class="text-xl md:text-2xl text-gray-100 mb-12 max-w-3xl mx-auto leading-relaxed font-light reveal">
-                Professional HVAC installations, repairs, and air quality solutions for homes and businesses across Connecticut and NYC.
+                Professional HVAC installations, repairs, maintenance, and air quality solutions for homes and businesses across Connecticut, NYC, and surrounding areas.
             </p>
             <div class="flex flex-col md:flex-row gap-6 justify-center items-center reveal">
-                <a href="#quote" class="btn-primary w-full md:w-64 py-5 rounded-xl font-bold text-lg">Get a Free Quote</a>
+                <a href="#quote" class="btn-primary w-full md:w-64 py-5 rounded-xl font-bold text-lg text-white">Get a Free Quote</a>
                 <a href="tel:XXXXXXXXXX" class="btn-white w-full md:w-64 py-5 rounded-xl font-bold text-lg">Call Us Now</a>
             </div>
             
@@ -198,27 +198,20 @@
     <section id="about" class="py-24 px-4 bg-brand-gray overflow-hidden">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div class="reveal">
-                <h2 class="text-brand-blue font-bold tracking-widest uppercase mb-4">Precision Engineering</h2>
-                <h3 class="text-4xl md:text-5xl font-black text-brand-dark mb-8 leading-tight">Built on Quality Work & Long-Term Comfort</h3>
-                <p class="text-gray-600 mb-8 leading-relaxed text-lg">
-                    At Morant Mechanical Group, we believe every home and business deserves dependable systems. Serving CT and NYC, we specialize in high-efficiency upgrades and rapid-response repairs.
+                <h2 class="text-brand-blue font-bold tracking-widest uppercase mb-4">Quality & Care</h2>
+                <h3 class="text-4xl md:text-5xl font-black text-brand-dark mb-8 leading-tight">Built on Quality Work, Honest Service & Long-Term Comfort</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                    At Morant Mechanical Group, we believe every home and business deserves dependable systems that work efficiently year-round. Serving CT and NYC, we specialize in everything from installations to energy-efficient upgrades.
                 </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-                    <div class="flex items-start gap-4">
-                        <span class="bg-brand-blue text-white p-2 rounded-lg shadow-lg"><i class="fa-solid fa-user-gear"></i></span>
-                        <div>
-                            <p class="font-bold text-brand-dark">HVAC Pros</p>
-                            <p class="text-sm text-gray-500">Experienced Team</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <span class="bg-brand-blue text-white p-2 rounded-lg shadow-lg"><i class="fa-solid fa-tags"></i></span>
-                        <div>
-                            <p class="font-bold text-brand-dark">Fair Pricing</p>
-                            <p class="text-sm text-gray-500">Transparent Quotes</p>
-                        </div>
-                    </div>
+                <p class="text-gray-600 mb-8 leading-relaxed">Whether you need a quick repair or a full installation, our team is committed to professional workmanship, transparent communication, and reliable service from start to finish.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-blue"></i> Honest Pricing</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-blue"></i> Fast Scheduling</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-blue"></i> High-Quality Work</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-blue"></i> Personalized Service</div>
                 </div>
+
                 <button class="bg-brand-dark text-white px-10 py-4 rounded-xl font-bold hover:bg-gray-800 transition-all flex items-center gap-3">
                     Schedule Service <i class="fa-solid fa-arrow-right text-brand-blue"></i>
                 </button>
@@ -228,7 +221,6 @@
                 <!-- AC Animation Mockup -->
                 <div class="ac-mockup">
                     <div class="ac-grill"></div>
-                    <!-- Brand Label on AC -->
                     <div class="absolute top-6 left-8 bg-white/80 px-3 py-1 rounded text-[10px] font-black text-brand-blue uppercase tracking-widest border border-gray-300 z-20">
                         Morant Mechanical
                     </div>
@@ -238,92 +230,157 @@
                         <div class="fan-blade"></div>
                         <div class="fan-blade"></div>
                     </div>
-                    <!-- Vent details -->
-                    <div class="absolute bottom-6 inset-x-8 flex justify-between">
-                        <div class="w-1/4 h-2 bg-gray-400 rounded-full opacity-30"></div>
-                        <div class="w-1/4 h-2 bg-gray-400 rounded-full opacity-30"></div>
-                        <div class="w-1/4 h-2 bg-gray-400 rounded-full opacity-30"></div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Grid -->
     <section id="services" class="py-24 px-4 bg-white">
         <div class="max-w-7xl mx-auto text-center mb-20 reveal">
-            <h2 class="text-brand-blue font-bold tracking-widest uppercase mb-4">Our Expertise</h2>
-            <h3 class="text-4xl md:text-5xl font-black text-brand-dark mb-6">Complete Heating & Cooling</h3>
-            <p class="text-gray-500 max-w-2xl mx-auto text-lg font-light">Tailored HVAC solutions designed for peak performance and maximum energy savings.</p>
+            <h2 class="text-brand-blue font-bold tracking-widest uppercase mb-4">Complete Solutions</h2>
+            <h3 class="text-4xl md:text-5xl font-black text-brand-dark mb-6">HVAC Services Tailored to You</h3>
         </div>
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Service 1 -->
-            <div class="service-card p-10 border border-gray-100 rounded-3xl bg-white shadow-sm reveal">
-                <div class="w-16 h-16 bg-brand-blue/10 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-8"><i class="fa-solid fa-snowflake"></i></div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-10 border border-gray-100 rounded-3xl bg-brand-gray reveal">
+                <i class="fa-solid fa-snowflake text-4xl text-brand-blue mb-6"></i>
                 <h4 class="text-xl font-bold mb-4">HVAC Installation</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">Top-tier systems professionally installed for efficiency and durability.</p>
+                <p class="text-gray-500 text-sm">Professional installation designed for peak performance and energy efficiency.</p>
             </div>
-            <!-- Service 2 -->
-            <div class="service-card p-10 border border-gray-100 rounded-3xl bg-white shadow-sm reveal" style="transition-delay: 0.1s;">
-                <div class="w-16 h-16 bg-brand-blue/10 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-8"><i class="fa-solid fa-bolt"></i></div>
-                <h4 class="text-xl font-bold mb-4">Fast Repairs</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">Emergency support and rapid diagnostics for all major brands.</p>
+            <div class="p-10 border border-gray-100 rounded-3xl bg-brand-gray reveal" style="transition-delay: 0.1s;">
+                <i class="fa-solid fa-screwdriver-wrench text-4xl text-brand-blue mb-6"></i>
+                <h4 class="text-xl font-bold mb-4">Routine Maintenance</h4>
+                <p class="text-gray-500 text-sm">Prevent breakdowns and extend system life with scheduled inspections.</p>
             </div>
-            <!-- Service 3 -->
-            <div class="service-card p-10 border border-gray-100 rounded-3xl bg-white shadow-sm reveal" style="transition-delay: 0.2s;">
-                <div class="w-16 h-16 bg-brand-blue/10 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-8"><i class="fa-solid fa-leaf"></i></div>
-                <h4 class="text-xl font-bold mb-4">Maintenance</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">Scheduled tune-ups to extend equipment life and reduce bills.</p>
+            <div class="p-10 border border-gray-100 rounded-3xl bg-brand-gray reveal" style="transition-delay: 0.2s;">
+                <i class="fa-solid fa-fire-flame-curved text-4xl text-brand-blue mb-6"></i>
+                <h4 class="text-xl font-bold mb-4">HVAC Repairs</h4>
+                <p class="text-gray-500 text-sm">Fast diagnostics for furnaces, air conditioners, and thermostats.</p>
             </div>
-            <!-- Service 4 -->
-            <div class="service-card p-10 border border-gray-100 rounded-3xl bg-white shadow-sm reveal" style="transition-delay: 0.3s;">
-                <div class="w-16 h-16 bg-brand-blue/10 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-8"><i class="fa-solid fa-wind"></i></div>
-                <h4 class="text-xl font-bold mb-4">Air Quality</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">Advanced filtration and purification for healthier indoor living.</p>
+            <div class="p-10 border border-gray-100 rounded-3xl bg-brand-gray reveal">
+                <i class="fa-solid fa-wind text-4xl text-brand-blue mb-6"></i>
+                <h4 class="text-xl font-bold mb-4">Indoor Air Quality</h4>
+                <p class="text-gray-500 text-sm">Purification solutions and airflow improvements for your home.</p>
+            </div>
+            <div class="p-10 border border-gray-100 rounded-3xl bg-brand-gray reveal" style="transition-delay: 0.1s;">
+                <i class="fa-solid fa-chart-line text-4xl text-brand-blue mb-6"></i>
+                <h4 class="text-xl font-bold mb-4">Energy Efficiency Audits</h4>
+                <p class="text-gray-500 text-sm">Identify energy waste and help reduce your monthly utility costs.</p>
+            </div>
+            <div class="p-10 border border-gray-100 rounded-3xl bg-brand-gray reveal" style="transition-delay: 0.2s;">
+                <i class="fa-solid fa-mobile-screen text-4xl text-brand-blue mb-6"></i>
+                <h4 class="text-xl font-bold mb-4">Smart Controls</h4>
+                <p class="text-gray-500 text-sm">Upgrade to programmable thermostats for better temperature control.</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 reveal">
+            <button class="border-2 border-brand-blue text-brand-blue px-10 py-4 rounded-lg font-bold hover:bg-brand-blue hover:text-white transition-all">View All Services</button>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-24 px-4 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto text-center mb-16 reveal">
+            <h3 class="text-3xl md:text-5xl font-black mb-6">Get a Quote in 3 Simple Steps</h3>
+        </div>
+        <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-12 text-center">
+            <div class="reveal">
+                <div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+                <h5 class="text-xl font-bold mb-4">Contact Us</h5>
+                <p class="text-gray-400">Call, text, or submit a request online to tell us about your needs.</p>
+            </div>
+            <div class="reveal" style="transition-delay: 0.1s;">
+                <div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+                <h5 class="text-xl font-bold mb-4">Schedule Visit</h5>
+                <p class="text-gray-400">We’ll quickly coordinate a convenient time for an inspection.</p>
+            </div>
+            <div class="reveal" style="transition-delay: 0.2s;">
+                <div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+                <h5 class="text-xl font-bold mb-4">Custom Solution</h5>
+                <p class="text-gray-400">Receive honest recommendations and a clear quote tailored to you.</p>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 bg-brand-dark text-white px-4">
+    <!-- Projects / Gallery -->
+    <section id="projects" class="py-24 bg-white px-4">
         <div class="max-w-7xl mx-auto">
             <div class="mb-16 reveal">
-                <h2 class="text-brand-blue font-bold tracking-widest uppercase mb-4">Project Gallery</h2>
-                <h3 class="text-4xl md:text-5xl font-black mb-6">HVAC Work Built for Comfort</h3>
-                <div class="h-1 w-24 bg-brand-blue"></div>
+                <h3 class="text-4xl font-black text-brand-dark mb-4">Our Recent HVAC Projects</h3>
+                <p class="text-gray-500">Take a look at our recent installations and upgrades across CT and New York.</p>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="group overflow-hidden rounded-2xl bg-gray-900 border border-white/5 reveal">
-                    <div class="overflow-hidden">
-                        <img src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/3ae0feac-3154-49f8-a3e7-a63e84ba98f5.jpeg" 
-                             class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700" alt="Ductwork">
-                    </div>
-                    <div class="p-8">
-                        <h5 class="text-xl font-bold mb-2">Custom Ductwork</h5>
-                        <p class="text-sm text-gray-400">Strategic airflow design for commercial properties.</p>
-                    </div>
-                </div>
-                <div class="group overflow-hidden rounded-2xl bg-gray-900 border border-white/5 reveal" style="transition-delay: 0.1s;">
-                    <div class="overflow-hidden">
-                        <img src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/89fc544f-36c3-4b39-84fe-d30f83372876.jpeg" 
-                             class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700" alt="Unit Install">
-                    </div>
-                    <div class="p-8">
-                        <h5 class="text-xl font-bold mb-2">Exterior Installation</h5>
-                        <p class="text-sm text-gray-400">High-durability residential condenser placement.</p>
-                    </div>
-                </div>
-                <div class="group overflow-hidden rounded-2xl bg-gray-900 border border-white/5 reveal" style="transition-delay: 0.2s;">
-                    <div class="overflow-hidden">
-                        <img src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/de5b1263-d85a-4942-a68e-b9617b470aec.jpeg" 
-                             class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700" alt="System Upgrade">
-                    </div>
-                    <div class="p-8">
-                        <h5 class="text-xl font-bold mb-2">Full System Upgrade</h5>
-                        <p class="text-sm text-gray-400">Complete HVAC overhaul for modern energy efficiency.</p>
-                    </div>
-                </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <img src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/3ae0feac-3154-49f8-a3e7-a63e84ba98f5.jpeg" class="rounded-xl w-full h-64 object-cover reveal" alt="Project 1">
+                <img src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/89fc544f-36c3-4b39-84fe-d30f83372876.jpeg" class="rounded-xl w-full h-64 object-cover reveal" style="transition-delay: 0.1s;" alt="Project 2">
+                <img src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/de5b1263-d85a-4942-a68e-b9617b470aec.jpeg" class="rounded-xl w-full h-64 object-cover reveal" style="transition-delay: 0.2s;" alt="Project 3">
+                <img src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/ae137a4f-c0b4-43ca-ba85-d7bcd407ff11.jpeg" class="rounded-xl w-full h-64 object-cover reveal" alt="Project 4">
+                <img src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/4cb886ac-3811-41ae-9e7f-50799d20d77c.jpeg" class="rounded-xl w-full h-64 object-cover reveal" style="transition-delay: 0.1s;" alt="Project 5">
+                <img src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/9638b4fc-e12c-49bf-9d43-b80684e849a3.jpeg" class="rounded-xl w-full h-64 object-cover reveal" style="transition-delay: 0.2s;" alt="Project 6">
+            </div>
+            <div class="text-center reveal">
+                <a href="#" class="bg-brand-dark text-white px-8 py-3 rounded-lg font-bold">See More Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="py-24 bg-brand-gray px-4">
+        <div class="max-w-7xl mx-auto text-center mb-16 reveal">
+            <h3 class="text-4xl font-black mb-4">Trusted by Homeowners & Businesses</h3>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div class="bg-white p-10 rounded-2xl shadow-sm reveal">
+                <p class="text-gray-700 italic mb-6">"Professional, dependable, and skilled. Morant Mechanical Group delivers excellent results every time."</p>
+                <p class="font-bold text-brand-dark">— John Michael</p>
+            </div>
+            <div class="bg-white p-10 rounded-2xl shadow-sm reveal" style="transition-delay: 0.1s;">
+                <p class="text-gray-700 italic mb-6">"Very knowledgeable and transparent. Amazing experience working with Mr. Morant."</p>
+                <p class="font-bold text-brand-dark">— Karene B.</p>
+            </div>
+            <div class="bg-white p-10 rounded-2xl shadow-sm reveal" style="transition-delay: 0.2s;">
+                <p class="text-gray-700 italic mb-6">"Outstanding installation service. The process was smooth and professional from start to finish."</p>
+                <p class="font-bold text-brand-dark">— Bob Chao</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-4xl font-black mb-12 text-center reveal">Frequently Asked Questions</h3>
+            <div class="space-y-6 reveal">
+                <details class="group border-b border-gray-200 pb-6" open>
+                    <summary class="flex justify-between items-center font-bold text-xl cursor-pointer list-none">
+                        Do you offer free estimates?
+                        <span class="group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-gray-600">Yes, we provide free estimates for many of our heating and cooling services.</p>
+                </details>
+                <details class="group border-b border-gray-200 pb-6">
+                    <summary class="flex justify-between items-center font-bold text-xl cursor-pointer list-none">
+                        What areas do you serve?
+                        <span class="group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-gray-600">Fairfield County, Bridgeport, Stamford, New Haven, Norwalk, Greenwich, NYC boroughs, and surrounding areas.</p>
+                </details>
+                <details class="group border-b border-gray-200 pb-6">
+                    <summary class="flex justify-between items-center font-bold text-xl cursor-pointer list-none">
+                        Do you provide emergency HVAC services?
+                        <span class="group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-gray-600">Yes, we offer emergency HVAC support for urgent heating and cooling issues.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="py-24 px-4 bg-brand-gray text-center overflow-hidden">
+        <div class="max-w-7xl mx-auto reveal">
+            <h3 class="text-3xl md:text-5xl font-black mb-8">Proudly Serving Connecticut & New York</h3>
+            <p class="text-xl text-gray-600 mb-12">Fairfield • Bridgeport • New Haven • Stamford • Norwalk • Danbury • Greenwich • Waterbury • Nassau County • Brooklyn • Queens • Bronx • Westchester County</p>
+            <div class="bg-brand-blue/5 p-8 rounded-3xl border border-brand-blue/10">
+                <p class="text-brand-blue font-bold text-lg">Fast response times across the tri-state area.</p>
             </div>
         </div>
     </section>
@@ -335,16 +392,16 @@
                 <img src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/416x416/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/973bceb9-5291-40d8-ac1a-ef3813dcf364.png" 
                      class="h-16 w-auto mb-8 bg-white p-2 rounded-lg" alt="Logo">
                 <p class="text-gray-400 leading-relaxed">
-                    Premium heating and cooling services for residential and commercial properties. We keep CT and NYC comfortable all year long.
+                    Reliable HVAC services for residential and commercial properties throughout Connecticut and NYC.
                 </p>
             </div>
             <div>
-                <h6 class="text-xl font-bold mb-8">Services</h6>
+                <h6 class="text-xl font-bold mb-8">Quick Links</h6>
                 <ul class="space-y-4 text-gray-400">
-                    <li><a href="#" class="hover:text-brand-blue transition-colors">Installation</a></li>
-                    <li><a href="#" class="hover:text-brand-blue transition-colors">Emergency Repairs</a></li>
-                    <li><a href="#" class="hover:text-brand-blue transition-colors">Ductwork Design</a></li>
-                    <li><a href="#" class="hover:text-brand-blue transition-colors">Air Quality</a></li>
+                    <li><a href="#" class="hover:text-brand-blue">Home</a></li>
+                    <li><a href="#" class="hover:text-brand-blue">About Us</a></li>
+                    <li><a href="#" class="hover:text-brand-blue">Services</a></li>
+                    <li><a href="#" class="hover:text-brand-blue">Contact</a></li>
                 </ul>
             </div>
             <div>
@@ -358,9 +415,8 @@
             <div>
                 <h6 class="text-xl font-bold mb-8">Connect</h6>
                 <div class="flex gap-4">
-                    <a href="#" class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-brand-blue hover:-translate-y-1 transition-all"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-brand-blue hover:-translate-y-1 transition-all"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-brand-blue hover:-translate-y-1 transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-brand-blue transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-brand-blue transition-all"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -370,28 +426,16 @@
     </footer>
 
     <script>
-        // Simple Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
-        document.querySelectorAll('.reveal').forEach((el) => {
-            observer.observe(el);
-        });
-
-        // Trigger hero reveal immediately
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+        
         window.onload = () => {
-            document.querySelectorAll('#home .reveal').forEach((el) => {
-                el.classList.add('active');
-            });
+            document.querySelectorAll('#home .reveal').forEach((el) => el.classList.add('active'));
         };
     </script>
 
