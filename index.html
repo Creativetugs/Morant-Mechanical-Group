@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morant Mechanical Group | Trusted HVAC Experts CT & NYC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #0172bd;
+            --brand-dark: #0f1115;
+            --brand-gray: #f8fafc;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        .bg-brand-blue { background-color: var(--brand-blue); }
+        .text-brand-blue { color: var(--brand-blue); }
+        .bg-brand-dark { background-color: var(--brand-dark); }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(10, 12, 15, 0.8), rgba(10, 12, 15, 0.9)), 
+                        url('https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/35e504a5-b52d-41c2-8dff-a62a8bf04325.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-blue);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary:hover {
+            background-color: #015a96;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(1, 114, 189, 0.4);
+        }
+
+        .btn-white {
+            background-color: #ffffff;
+            color: var(--brand-dark);
+            transition: all 0.3s ease;
+        }
+        .btn-white:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* AC Animation Mockup */
+        .ac-mockup {
+            width: 100%;
+            max-width: 450px;
+            height: 300px;
+            background: #e5e7eb;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 8px solid #d1d5db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .ac-grill {
+            position: absolute;
+            inset: 20px;
+            background: radial-gradient(circle, #374151 1px, transparent 1px);
+            background-size: 10px 10px;
+            border-radius: 15px;
+            opacity: 0.2;
+        }
+        .fan-container {
+            width: 180px;
+            height: 180px;
+            position: relative;
+            z-index: 2;
+        }
+        .fan-blade {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            height: 20px;
+            background: #4b5563;
+            border-radius: 50px;
+            transform-origin: left center;
+            animation: rotateFan 1.5s linear infinite;
+        }
+        .fan-blade:nth-child(2) { transform: rotate(120deg); animation: rotateFan2 1.5s linear infinite; }
+        .fan-blade:nth-child(3) { transform: rotate(240deg); animation: rotateFan3 1.5s linear infinite; }
+        
+        @keyframes rotateFan { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes rotateFan2 { from { transform: rotate(120deg); } to { transform: rotate(480deg); } }
+        @keyframes rotateFan3 { from { transform: rotate(240deg); } to { transform: rotate(600deg); } }
+
+        .fan-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: #1f2937;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Top Bar -->
+    <div class="bg-brand-dark text-white py-2 px-4 text-sm hidden md:block border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex gap-6">
+                <span><i class="fa-solid fa-location-dot text-brand-blue mr-2"></i>Serving Connecticut, NYC & Surrounding Areas</span>
+                <span><i class="fa-solid fa-envelope text-brand-blue mr-2"></i>omorant@morantmechanical.com</span>
+            </div>
+            <div>
+                <span><i class="fa-solid fa-phone text-brand-blue mr-2"></i>Call Now: (XXX) XXX-XXXX</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white sticky-header">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/416x416/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/973bceb9-5291-40d8-ac1a-ef3813dcf364.png" 
+                     alt="Morant Mechanical Group Logo" class="h-12 w-auto">
+            </div>
+            <div class="hidden lg:flex gap-8 font-semibold text-gray-700">
+                <a href="#home" class="hover:text-brand-blue transition-colors">Home</a>
+                <a href="#about" class="hover:text-brand-blue transition-colors">About</a>
+                <a href="#services" class="hover:text-brand-blue transition-colors">Services</a>
+                <a href="#projects" class="hover:text-brand-blue transition-colors">Projects</a>
+                <a href="#reviews" class="hover:text-brand-blue transition-colors">Reviews</a>
+            </div>
+            <div>
+                <a href="#quote" class="btn-primary text-white px-6 py-3 rounded-lg font-bold">Get a Free Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-24 md:py-48 px-4 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tight reveal">
+                Reliable Heating & <br> <span class="text-brand-blue">Cooling Solutions</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-100 mb-12 max-w-3xl mx-auto leading-relaxed font-light reveal">
+                Professional HVAC installations, repairs, and air quality solutions for homes and businesses across Connecticut and NYC.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center reveal">
+                <a href="#quote" class="btn-primary w-full md:w-64 py-5 rounded-xl font-bold text-lg">Get a Free Quote</a>
+                <a href="tel:XXXXXXXXXX" class="btn-white w-full md:w-64 py-5 rounded-xl font-bold text-lg">Call Us Now</a>
+            </div>
+            
+            <!-- Hero Badges -->
+            <div class="mt-20 flex flex-wrap justify-center gap-8 md:gap-12 reveal">
+                <div class="flex items-center gap-2 text-sm font-semibold tracking-wider uppercase opacity-80">
+                    <i class="fa-solid fa-award text-brand-blue text-xl"></i> Veteran-Owned
+                </div>
+                <div class="flex items-center gap-2 text-sm font-semibold tracking-wider uppercase opacity-80">
+                    <i class="fa-solid fa-house-shield text-brand-blue text-xl"></i> Locally Trusted
+                </div>
+                <div class="flex items-center gap-2 text-sm font-semibold tracking-wider uppercase opacity-80">
+                    <i class="fa-solid fa-check-double text-brand-blue text-xl"></i> Quality Work
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with AC Animation -->
+    <section id="about" class="py-24 px-4 bg-brand-gray overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h2 class="text-brand-blue font-bold tracking-widest uppercase mb-4">Precision Engineering</h2>
+                <h3 class="text-4xl md:text-5xl font-black text-brand-dark mb-8 leading-tight">Built on Quality Work & Long-Term Comfort</h3>
+                <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                    At Morant Mechanical Group, we believe every home and business deserves dependable systems. Serving CT and NYC, we specialize in high-efficiency upgrades and rapid-response repairs.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                    <div class="flex items-start gap-4">
+                        <span class="bg-brand-blue text-white p-2 rounded-lg shadow-lg"><i class="fa-solid fa-user-gear"></i></span>
+                        <div>
+                            <p class="font-bold text-brand-dark">HVAC Pros</p>
+                            <p class="text-sm text-gray-500">Experienced Team</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="bg-brand-blue text-white p-2 rounded-lg shadow-lg"><i class="fa-solid fa-tags"></i></span>
+                        <div>
+                            <p class="font-bold text-brand-dark">Fair Pricing</p>
+                            <p class="text-sm text-gray-500">Transparent Quotes</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-brand-dark text-white px-10 py-4 rounded-xl font-bold hover:bg-gray-800 transition-all flex items-center gap-3">
+                    Schedule Service <i class="fa-solid fa-arrow-right text-brand-blue"></i>
+                </button>
+            </div>
+            
+            <div class="flex justify-center reveal">
+                <!-- AC Animation Mockup -->
+                <div class="ac-mockup">
+                    <div class="ac-grill"></div>
+                    <!-- Brand Label on AC -->
+                    <div class="absolute top-6 left-8 bg-white/80 px-3 py-1 rounded text-[10px] font-black text-brand-blue uppercase tracking-widest border border-gray-300 z-20">
+                        Morant Mechanical
+                    </div>
+                    <div class="fan-container">
+                        <div class="fan-center"></div>
+                        <div class="fan-blade"></div>
+                        <div class="fan-blade"></div>
+                        <div class="fan-blade"></div>
+                    </div>
+                    <!-- Vent details -->
+                    <div class="absolute bottom-6 inset-x-8 flex justify-between">
+                        <div class="w-1/4 h-2 bg-gray-400 rounded-full opacity-30"></div>
+                        <div class="w-1/4 h-2 bg-gray-400 rounded-full opacity-30"></div>
+                        <div class="w-1/4 h-2 bg-gray-400 rounded-full opacity-30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto text-center mb-20 reveal">
+            <h2 class="text-brand-blue font-bold tracking-widest uppercase mb-4">Our Expertise</h2>
+            <h3 class="text-4xl md:text-5xl font-black text-brand-dark mb-6">Complete Heating & Cooling</h3>
+            <p class="text-gray-500 max-w-2xl mx-auto text-lg font-light">Tailored HVAC solutions designed for peak performance and maximum energy savings.</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Service 1 -->
+            <div class="service-card p-10 border border-gray-100 rounded-3xl bg-white shadow-sm reveal">
+                <div class="w-16 h-16 bg-brand-blue/10 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-8"><i class="fa-solid fa-snowflake"></i></div>
+                <h4 class="text-xl font-bold mb-4">HVAC Installation</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Top-tier systems professionally installed for efficiency and durability.</p>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card p-10 border border-gray-100 rounded-3xl bg-white shadow-sm reveal" style="transition-delay: 0.1s;">
+                <div class="w-16 h-16 bg-brand-blue/10 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-8"><i class="fa-solid fa-bolt"></i></div>
+                <h4 class="text-xl font-bold mb-4">Fast Repairs</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Emergency support and rapid diagnostics for all major brands.</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card p-10 border border-gray-100 rounded-3xl bg-white shadow-sm reveal" style="transition-delay: 0.2s;">
+                <div class="w-16 h-16 bg-brand-blue/10 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-8"><i class="fa-solid fa-leaf"></i></div>
+                <h4 class="text-xl font-bold mb-4">Maintenance</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Scheduled tune-ups to extend equipment life and reduce bills.</p>
+            </div>
+            <!-- Service 4 -->
+            <div class="service-card p-10 border border-gray-100 rounded-3xl bg-white shadow-sm reveal" style="transition-delay: 0.3s;">
+                <div class="w-16 h-16 bg-brand-blue/10 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-8"><i class="fa-solid fa-wind"></i></div>
+                <h4 class="text-xl font-bold mb-4">Air Quality</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Advanced filtration and purification for healthier indoor living.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-brand-dark text-white px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 reveal">
+                <h2 class="text-brand-blue font-bold tracking-widest uppercase mb-4">Project Gallery</h2>
+                <h3 class="text-4xl md:text-5xl font-black mb-6">HVAC Work Built for Comfort</h3>
+                <div class="h-1 w-24 bg-brand-blue"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="group overflow-hidden rounded-2xl bg-gray-900 border border-white/5 reveal">
+                    <div class="overflow-hidden">
+                        <img src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/3ae0feac-3154-49f8-a3e7-a63e84ba98f5.jpeg" 
+                             class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700" alt="Ductwork">
+                    </div>
+                    <div class="p-8">
+                        <h5 class="text-xl font-bold mb-2">Custom Ductwork</h5>
+                        <p class="text-sm text-gray-400">Strategic airflow design for commercial properties.</p>
+                    </div>
+                </div>
+                <div class="group overflow-hidden rounded-2xl bg-gray-900 border border-white/5 reveal" style="transition-delay: 0.1s;">
+                    <div class="overflow-hidden">
+                        <img src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/89fc544f-36c3-4b39-84fe-d30f83372876.jpeg" 
+                             class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700" alt="Unit Install">
+                    </div>
+                    <div class="p-8">
+                        <h5 class="text-xl font-bold mb-2">Exterior Installation</h5>
+                        <p class="text-sm text-gray-400">High-durability residential condenser placement.</p>
+                    </div>
+                </div>
+                <div class="group overflow-hidden rounded-2xl bg-gray-900 border border-white/5 reveal" style="transition-delay: 0.2s;">
+                    <div class="overflow-hidden">
+                        <img src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/de5b1263-d85a-4942-a68e-b9617b470aec.jpeg" 
+                             class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700" alt="System Upgrade">
+                    </div>
+                    <div class="p-8">
+                        <h5 class="text-xl font-bold mb-2">Full System Upgrade</h5>
+                        <p class="text-sm text-gray-400">Complete HVAC overhaul for modern energy efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-24 pb-12 px-4 border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+            <div>
+                <img src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/416x416/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/973bceb9-5291-40d8-ac1a-ef3813dcf364.png" 
+                     class="h-16 w-auto mb-8 bg-white p-2 rounded-lg" alt="Logo">
+                <p class="text-gray-400 leading-relaxed">
+                    Premium heating and cooling services for residential and commercial properties. We keep CT and NYC comfortable all year long.
+                </p>
+            </div>
+            <div>
+                <h6 class="text-xl font-bold mb-8">Services</h6>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="#" class="hover:text-brand-blue transition-colors">Installation</a></li>
+                    <li><a href="#" class="hover:text-brand-blue transition-colors">Emergency Repairs</a></li>
+                    <li><a href="#" class="hover:text-brand-blue transition-colors">Ductwork Design</a></li>
+                    <li><a href="#" class="hover:text-brand-blue transition-colors">Air Quality</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="text-xl font-bold mb-8">Contact</h6>
+                <ul class="space-y-4 text-gray-400">
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-brand-blue"></i> Fairfield, CT</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-brand-blue"></i> (XXX) XXX-XXXX</li>
+                    <li class="flex items-center gap-3 text-sm"><i class="fa-solid fa-envelope text-brand-blue"></i> omorant@morantmechanical.com</li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="text-xl font-bold mb-8">Connect</h6>
+                <div class="flex gap-4">
+                    <a href="#" class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-brand-blue hover:-translate-y-1 transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-brand-blue hover:-translate-y-1 transition-all"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-brand-blue hover:-translate-y-1 transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-10 border-t border-white/5 text-center text-gray-500 text-sm">
+            <p>© 2026 Morant Mechanical Group. Designed by <a href="http://www.creativetugs.com" class="text-brand-blue font-bold">CreativeTugs</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Trigger hero reveal immediately
+        window.onload = () => {
+            document.querySelectorAll('#home .reveal').forEach((el) => {
+                el.classList.add('active');
+            });
+        };
+    </script>
+
+</body>
+</html>
